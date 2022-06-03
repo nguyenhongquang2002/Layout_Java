@@ -1,7 +1,9 @@
 package com.example.CategoryAsm.Entity.base;
 
+import com.example.CategoryAsm.Entity.Product;
 import com.example.CategoryAsm.Entity.StatusEnum.ProductStatus;
 
+import java.nio.channels.FileLock;
 import java.time.LocalDateTime;
 
 public abstract class BaseEntity {
@@ -77,4 +79,10 @@ public abstract class BaseEntity {
     public void setDeletedBy(int deletedBy) {
         this.deletedBy = deletedBy;
     }
+
+    public abstract FileLock getProductValidation();
+
+    public abstract Product findById(int id);
+
+    public abstract void update(int id, Product product);
 }

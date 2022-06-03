@@ -1,20 +1,47 @@
 package com.example.CategoryAsm.Entity;
 
+import com.example.CategoryAsm.Entity.StatusEnum.ProductStatus;
 import com.example.CategoryAsm.Entity.base.BaseEntity;
+
+import java.nio.channels.FileLock;
+import java.time.LocalDateTime;
 
 public class Product extends BaseEntity {
     private int id;
-    private String name;
-    private String desciption;
+    private int categoryID;
+    private String Name;
+    //private String slug;
+    private String description;
     private String detail;
+    private String thumbnails;
     private double price;
+    private ProductStatus status;
 
-    public Product(int id, String name, String desciption, String detail, double price) {
+    public Product(int id, String name, String categoryID, String description, String detail, String thumbnails, String price, LocalDateTime createdAt, LocalDateTime updatedAt, LocalDateTime deletedAt, int createdBy, int updatedBy, int deletedBy, ProductStatus status) {
+    }
+
+    public Product() {
         this.id = id;
-        this.name = name;
-        this.desciption = desciption;
+        this.categoryID = categoryID;
+        this.description = description;
         this.detail = detail;
+        this.thumbnails = thumbnails;
         this.price = price;
+        this.status = status;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", categoryID=" + categoryID +
+                ", Name='" + Name + '\'' +
+                ", description='" + description + '\'' +
+                ", detail='" + detail + '\'' +
+                ", thumbnails='" + thumbnails + '\'' +
+                ", price=" + price +
+                ", status=" + status +
+                '}';
     }
 
     public int getId() {
@@ -25,20 +52,28 @@ public class Product extends BaseEntity {
         this.id = id;
     }
 
+    public int getCategoryID() {
+        return categoryID;
+    }
+
+    public void setCategoryID(int categoryID) {
+        this.categoryID = categoryID;
+    }
+
     public String getName() {
-        return name;
+        return Name;
     }
 
     public void setName(String name) {
-        this.name = name;
+        Name = name;
     }
 
-    public String getDesciption() {
-        return desciption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getDetail() {
@@ -49,11 +84,42 @@ public class Product extends BaseEntity {
         this.detail = detail;
     }
 
+    public String getThumbnails() {
+        return thumbnails;
+    }
+
+    public void setThumbnails(String thumbnails) {
+        this.thumbnails = thumbnails;
+    }
+
     public double getPrice() {
         return price;
     }
 
     public void setPrice(double price) {
         this.price = price;
+    }
+
+    public ProductStatus getStatus() {
+        return status;
+    }
+
+    public void setStatus(ProductStatus status) {
+        this.status = status;
+    }
+
+    @Override
+    public FileLock getProductValidation() {
+        return null;
+    }
+
+    @Override
+    public Product findById(int id) {
+        return null;
+    }
+
+    @Override
+    public void update(int id, Product product) {
+
     }
 }

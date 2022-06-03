@@ -6,7 +6,7 @@
 
     <servlet>
         <servlet-name>Dashboard</servlet-name>
-        <servlet-class>com.example.CategoryAsm.Controller.Admin.DashboardController</servlet-class>
+        <servlet-class>com.example.CategoryAsm.Controller.DashboardController</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>Dashboard</servlet-name>
@@ -29,6 +29,15 @@
         <url-pattern>/admin/product/from</url-pattern>
     </servlet-mapping>
     <servlet>
+        <servlet-name>UpdateProduct</servlet-name>
+        <jsp-file>/admin/views/product/update.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateProduct</servlet-name>
+        <url-pattern>/admin/product/update</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>ListCategory</servlet-name>
         <jsp-file>/admin/views/category/list.jsp</jsp-file>
     </servlet>
@@ -43,5 +52,13 @@
     <servlet-mapping>
         <servlet-name>FromCategory</servlet-name>
         <url-pattern>/admin/category/from</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>UpdateCategory</servlet-name>
+        <jsp-file>/admin/views/category/from.jsp</jsp-file>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UpdateCategory</servlet-name>
+        <url-pattern>/admin/category/update</url-pattern>
     </servlet-mapping>
 </web-app>

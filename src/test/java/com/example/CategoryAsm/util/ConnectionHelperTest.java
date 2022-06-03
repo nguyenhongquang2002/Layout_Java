@@ -9,8 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ConnectionHelperTest {
 
     @Test
-    void getConnection() {
-
+    void testGetConnection() {
         Connection connection = ConnectionHelper.getConnection();
         assertNotEquals(null,connection);
     }
