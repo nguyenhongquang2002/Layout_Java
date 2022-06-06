@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <jsp:include page="/admin/components/head.jsp">
-    <jsp:param name="title" value="FROM PRODUCT"/>
+    <jsp:param name="from_product" value="form_product"/>
 </jsp:include>
 <body>
 <div class="wrapper">

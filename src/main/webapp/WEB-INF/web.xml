@@ -61,4 +61,40 @@
         <servlet-name>UpdateCategory</servlet-name>
         <url-pattern>/admin/category/update</url-pattern>
     </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddCartServlet</servlet-name>
+        <servlet-class>com.example.CategoryAsm.Controller.Shoppingcart.AddCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddCartServlet</servlet-name>
+        <url-pattern>/shopping-cart/add</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SubCartServlet</servlet-name>
+        <servlet-class>com.example.CategoryAsm.Controller.Shoppingcart.SubCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SubCartServlet</servlet-name>
+        <url-pattern>/shopping-cart/sub</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>GetCartServlet</servlet-name>
+        <servlet-class>com.example.CategoryAsm.Controller.Shoppingcart.GetCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetCartServlet</servlet-name>
+        <url-pattern>/shopping-cart/get</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>RemoveCartServlet</servlet-name>
+        <servlet-class>com.example.CategoryAsm.Controller.Shoppingcart.RemoveCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RemoveCartServlet</servlet-name>
+        <url-pattern>/shopping-cart/remove</url-pattern>
+    </servlet-mapping>
+
+
 </web-app>

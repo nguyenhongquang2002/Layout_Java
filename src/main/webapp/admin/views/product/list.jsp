@@ -1,6 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<jsp:include page="/admin/components/head.jsp"/>
+<jsp:include page="/admin/components/head.jsp">
+    <jsp:param name="list_product" value="list_product"/>
+</jsp:include>
 <body>
 <div class="wrapper">
     <jsp:include page="/admin/components/sidebar.jsp"/>
