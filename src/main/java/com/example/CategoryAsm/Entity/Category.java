@@ -4,6 +4,7 @@ import com.example.CategoryAsm.Entity.StatusEnum.CategoryStatus;
 import com.example.CategoryAsm.Entity.StatusEnum.ProductStatus;
 import com.example.CategoryAsm.Entity.base.BaseEntity;
 
+import java.nio.channels.FileLock;
 import java.time.LocalDateTime;
 
 public class Category extends BaseEntity {
@@ -24,6 +25,21 @@ public class Category extends BaseEntity {
     public Category() {
         this.id = id;
         this.name = name;
+    }
+
+    @Override
+    public FileLock getProductValidation() {
+        return null;
+    }
+
+    @Override
+    public Product findById(int id) {
+        return null;
+    }
+
+    @Override
+    public void update(int id, Product product) {
+
     }
 
     public int getId() {

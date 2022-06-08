@@ -17,9 +17,9 @@ public enum CategoryStatus {
     }
 
     public static CategoryStatus of (int value){
-        for (CategoryStatus productEN : CategoryStatus.values()){
-            if(productEN.getValue() == value){
-                return productEN;
+        for (CategoryStatus categoryStatus : CategoryStatus.values()){
+            if(categoryStatus.getValue() == value){
+                return categoryStatus;
             }
         }
         return CategoryStatus.UNDEFINE;

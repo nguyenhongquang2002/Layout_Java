@@ -9,5 +9,10 @@ public interface CategoryModel {
     boolean update(int id ,Category category);
     boolean delete(int id);
     List<Category> findByAll();
-    static Category findById(int id);
+
+    static Category findById(int id) {
+        return null;
+    }
+
+    Category findById(int id);
 }
